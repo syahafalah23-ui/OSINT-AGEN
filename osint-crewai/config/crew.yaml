@@ -1,0 +1,28 @@
+# crew.yaml — Konfigurasi untuk deploy di platform CrewAI
+# https://app.crewai.com
+
+name: osint-intelligence-crew
+version: "1.0.0"
+description: "OSINT Intelligence Gathering Tool menggunakan multi-agent CrewAI"
+
+# Entry point
+main: main.py
+
+# Environment variables yang dibutuhkan di platform
+env:
+  - OPENAI_API_KEY
+  - SHODAN_API_KEY
+  - HUNTER_API_KEY
+  - HIBP_API_KEY
+  - VIRUSTOTAL_API_KEY
+  - IPINFO_TOKEN
+  - ABUSEIPDB_API_KEY
+  - TWITTER_BEARER_TOKEN
+
+# Python requirements
+python_version: "3.11"
+requirements: requirements.txt
+
+# Output folder
+outputs:
+  - outputs/
